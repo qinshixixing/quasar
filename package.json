@@ -1,0 +1,32 @@
+{
+  "name": "{{name}}",
+  "author": "{{author}}",
+  "version": "0.0.1",
+  "description": "{{description}}",
+  "scripts": {
+    "dev": "eb-webpack dev",
+    "build": "eb-webpack build"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@fortissimo/component": "^0.3.10",
+    "@fortissimo/hook": "^0.2.1",
+    "@fortissimo/request": "^0.1.9",
+    "@fortissimo/util": "^0.3.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^6.2.2",
+    "react-router-dom": "^6.2.2"
+  },
+  "devDependencies": {
+    "@ebullience/webpack": "^0.3.9",
+    "@ebullience/webpack-project-config": "^0.3.2",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.13"
+  },
+  "resolutions": {
+    "sanitize.css": "12.0.1"
+  }
+}

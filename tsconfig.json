@@ -1,0 +1,19 @@
+{
+  "extends": "@ebullience/webpack-project-config/typescript/tsconfig.json",
+  "compilerOptions": {
+    "strict": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "type"
+, "build.config.js"  ]
+}
