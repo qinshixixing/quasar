@@ -1,3 +1,3 @@
 declare namespace Env {
-  type PageType = 'test';
+  type PageType = '';
 }

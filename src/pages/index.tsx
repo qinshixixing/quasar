@@ -1,57 +1,52 @@
-import React, { memo } from 'react';
-import { Router } from '@/components';
+import React from 'react';
+
+import { setRoutes, setMenuList } from '@/util';
+import type { PageInfo } from '@/util';
 
 import Example from '@/pages/example';
 
-const pages: Page.Route[] = [
+const pages: PageInfo[] = [
   {
     path: '',
-    component: <div>hello, world!</div>
+    component: <div>hello, world!</div>,
+    title: 'index'
   },
   {
-    path: 'expample',
+    path: 'example',
     component: <Example />,
-    routes: [
+    title: 'example',
+    children: [
       {
         path: '',
-        component: <div>expample-index</div>,
-        layout: 'default'
+        component: <div>example-index</div>,
+        layout: 'default',
+        title: 'example-index'
       },
       {
         path: 'one',
-        component: <div>expample-one</div>,
-        layout: 'default'
+        component: <div>example-one</div>,
+        layout: 'default',
+        title: 'example-one'
       },
       {
-        path: 'two',
-        component: <div>expample-two</div>,
-        layout: 'main'
-      },
-      {
-        path: 'three',
-        component: <div>expample-three</div>,
-        layout: 'main',
-        root: true
+        path: 'example-two',
+        component: <div>example-two</div>,
+        layout: 'admin',
+        title: 'example-two'
       },
       {
         path: '*',
-        component: <div>expample-other</div>
+        component: <div>example-other</div>,
+        title: 'example-other'
       }
     ]
   },
   {
-    path: 'about',
-    component: <div>about</div>,
-    layout: 'default'
-  },
-  {
     path: 'no-layout',
-    component: <div>no-layout</div>
+    component: <div>no-layout</div>,
+    title: 'no-layout'
   }
 ];
 
-const Page = memo(() => {
-  return <Router config={pages} />;
-});
-
-export default Page;
+export const routes = setRoutes(pages, '', true);
+export const menuList = setMenuList(pages, '');

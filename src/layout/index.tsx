@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import Default from '@/layout/default';
-import Main from '@/layout/main';
+import Admin from '@/layout/admin';
 
 const layoutConfig: Map<Page.LayoutKey, FC> = new Map();
 layoutConfig.set('default', Default);
-layoutConfig.set('main', Main);
+layoutConfig.set('admin', Admin);
 
 export default layoutConfig;

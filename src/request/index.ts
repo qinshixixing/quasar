@@ -1,1 +1,1 @@
-export { request, setRequest } from './base';
+export { request, setAllRequestAuth } from './base';
