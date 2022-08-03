@@ -72,9 +72,9 @@ export async function request(
     const error: ResponseConfig = err;
     const checkLoginCode = hasSetRequest[type];
     const loginCode = loginCodeList[type];
-    const isLogin = checkLoginCode && loginCode.includes(error.code);
+    const isUnLogin = checkLoginCode && loginCode.includes(error.code);
     if (error.msg) console.info(error.msg);
-    if (error.msg && showErrorMsg && !isLogin) handleErrorMsg(error.msg);
+    if (error.msg && showErrorMsg && !isUnLogin) handleErrorMsg(error.msg);
     return Promise.reject(error);
   }
 }
